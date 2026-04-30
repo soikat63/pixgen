@@ -1,10 +1,11 @@
 import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
 import { PiDownloadSimple } from "react-icons/pi";
 
 const PhotoCard = ({ photo }) => {
-  console.log(photo);
+  // console.log(photo);
 
   return (
     <Card className="border rounded-xl ">
@@ -40,9 +41,11 @@ const PhotoCard = ({ photo }) => {
         </div>
       </div>
 
-      <Button variant="outline" className="w-full">
-        view
-      </Button>
+      <Link href={`/all-photos/${photo.id}`}>
+        <Button variant="outline" className="w-full">
+          view
+        </Button>
+      </Link>
     </Card>
   );
 };
