@@ -3,7 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { use } from "react";
+
 
 const Navbar = () => {
   const userData = authClient.useSession();
@@ -11,7 +11,7 @@ const Navbar = () => {
   // console.log(userData);
 
   const user = userData.data?.user;
-  console.log(user);
+  // console.log(user);
 
   const handleSignOut = async () => {
     await authClient.signOut()
